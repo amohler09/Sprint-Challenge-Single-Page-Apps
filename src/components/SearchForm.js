@@ -24,9 +24,12 @@ export default function SearchForm() {
   return (
     <section className="search-form">
         <form>
+          <label htmlFor='search'>Is your favorite character still alive?</label><br />
           <input 
+            id='search'
             type='text' 
-            placeholder='Search'
+            size='30'
+            placeholder='Type a name to find out!'
             onChange={handleChange}
             value={search}
             name='search' />
@@ -36,7 +39,7 @@ export default function SearchForm() {
           {data.map(item => {
             return (
             <div>
-              <img src={item.image} />
+              <img src={item.image} alt='rick and morty character' />
               <p>Name: {item.name}</p>
               <p>Currently {item.status}</p>
               <p>Identifies as {item.gender}</p>

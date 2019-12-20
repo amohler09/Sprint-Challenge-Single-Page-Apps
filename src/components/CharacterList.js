@@ -15,7 +15,6 @@ export default function CharacterList() {
       .catch(error => {
         console.log('data not returned', error)
       })
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, [character]);
 
   return (
